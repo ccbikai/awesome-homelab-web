@@ -12,6 +12,7 @@ import { getCachedFilters } from "../actions/cached_actions"
 import { getProducts } from "../actions/product"
 
 export const dynamic = "force-dynamic"
+export const runtime = "edge"
 
 export default async function ProductsPage({
   searchParams,

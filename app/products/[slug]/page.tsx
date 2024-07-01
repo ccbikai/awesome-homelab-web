@@ -5,6 +5,8 @@ import { getProductById } from "@/app/actions/product"
 
 import { ProductDetails } from "./details"
 
+export const runtime = "edge"
+
 const ProductIdPage = async ({ params }: { params: { slug: string } }) => {
   let data = await getProductById(params.slug)
 

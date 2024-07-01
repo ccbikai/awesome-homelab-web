@@ -6,6 +6,8 @@ import { createClient } from "@/db/supabase/client"
 
 import { ChangePassword } from "./form"
 
+export const runtime = "edge"
+
 export default function ChangePasswordPage() {
   const supabase = createClient()
   const [loading, setLoading] = useState(true)

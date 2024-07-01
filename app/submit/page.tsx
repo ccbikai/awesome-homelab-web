@@ -8,6 +8,8 @@ import { NavSidebar } from "../../components/nav"
 import { getCachedFilters } from "../actions/cached_actions"
 import SubmitTool from "./form"
 
+export const runtime = "edge"
+
 export default async function ProtectedSubmitPage(): Promise<ReactElement> {
   let filters = await getCachedFilters()
   const supabase = createClient()

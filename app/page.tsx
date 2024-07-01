@@ -14,6 +14,8 @@ import { NavSidebar } from "../components/nav"
 import { getCachedFilters } from "./actions/cached_actions"
 import { getProducts } from "./actions/product"
 
+export const runtime = 'edge'
+
 // Select the resources you want to feature.. AD SPACE?
 const FEATURED_IDS = [
   // "3b741434-1bdb-4903-91e9-a7fa154a8fdf",

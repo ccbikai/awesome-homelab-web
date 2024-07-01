@@ -2,6 +2,8 @@ import { LogoAnimationLink } from "@/components/nav"
 
 import { LoginForm } from "./form"
 
+export const runtime = "edge"
+
 export default async function LoginPage({
   searchParams,
 }: {
