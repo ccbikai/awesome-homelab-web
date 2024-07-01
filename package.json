@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "cult-admin-directory-template",
+  "name": "awesome-homelab-web",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -71,6 +71,7 @@
     "prettier": "^2.8.8"
   },
   "engines": {
-    "node": ">=18"
-  }
+    "node": ">=20"
+  },
+  "packageManager": "pnpm@9.4.0"
 }
