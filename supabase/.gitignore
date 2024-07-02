@@ -2,3 +2,5 @@
 .branches
 .temp
 .env
+config.toml
+seed.sql

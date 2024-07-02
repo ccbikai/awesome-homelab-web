@@ -13,8 +13,8 @@
     "bulk:enrich": "tsx supabase/seed/bulk-enrich.ts",
     "enrich": "tsx supabase/seed/src/main.ts",
     "fetch:og": "tsx supabase/seed/fetch-og-data.ts",
-    "format:write": "prettier --write \"**/*.{ts,tsx,mdx}\" --cache",
-    "format:check": "prettier --check \"**/*.{ts,tsx,mdx}\" --cache"
+    "format:write": "prettier --write \"**/*.{js,jsx,ts,tsx,mdx}\" --cache",
+    "format:check": "prettier --check \"**/*.{js,jsx,ts,tsx,mdx}\" --cache"
   },
   "dependencies": {
     "@ai-sdk/anthropic": "^0.0.18",

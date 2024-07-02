@@ -3,7 +3,7 @@ import { Suspense } from "react"
 import { Separator } from "@/components/ui/separator"
 import { FadeIn } from "@/components/cult/fade-in"
 import { DirectorySearch } from "@/components/directory-search"
-import { Hero } from "@/components/hero"
+import { Hero } from "@/components/hero-homelab"
 
 import {
   EmptyFeaturedGrid,
@@ -14,14 +14,15 @@ import { NavSidebar } from "../components/nav"
 import { getCachedFilters } from "./actions/cached_actions"
 import { getProducts } from "./actions/product"
 
-export const runtime = 'edge'
+export const runtime = "edge"
 
 // Select the resources you want to feature.. AD SPACE?
 const FEATURED_IDS = [
   // "3b741434-1bdb-4903-91e9-a7fa154a8fdf",
   // "f8a5db00-c80e-4fe4-80a7-af9d79a03690",
   // "ad4b9d2e-6461-4eed-afbf-86aa284000cc",
-  "",
+  "efa4416b-98f8-444a-be5b-c797e47b841b",
+  "cd8dab1e-4fd0-4a23-b60b-7f4933cf2c0f",
 ] // Replace 'id1', 'id2', 'id3' with actual IDs you want to feature
 
 async function Page({ searchParams }: { searchParams: { search?: string } }) {
@@ -60,9 +61,7 @@ async function Page({ searchParams }: { searchParams: { search?: string } }) {
                     </div>
                   </Suspense>
                 ) : (
-                  <div className="relative">
-                    <EmptyFeaturedGrid />
-                  </div>
+                  <div className="relative">{/* <EmptyFeaturedGrid /> */}</div>
                 )}
               </div>
             </div>

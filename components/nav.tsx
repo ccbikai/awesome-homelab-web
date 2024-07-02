@@ -78,7 +78,7 @@ export function NavSidebar({
           "fixed inset-y-0 left-0 z-10 hidden sm:flex flex-col bg-[#FAFAFA] dark:bg-background"
         )}
       >
-        <nav className="flex flex-col items-center gap-4 px-2 py-5">
+        <nav className="flex flex-col items-center gap-4 px-2 py-5 flex-1">
           {pathname.includes("admin") ? (
             <>
               <LogoAnimationLink />
@@ -98,10 +98,10 @@ export function NavSidebar({
           className={
             pathname.includes("admin")
               ? "flex flex-col gap-4 items-center py-5 mt-auto px-2 mx-2"
-              : "pl-3 flex flex-col justify-center gap-4 items-start pb-8"
+              : "pl-3 flex flex-col justify-center gap-4 items-start pb-4"
           }
         >
-          <DropdownMenu>
+          {/* <DropdownMenu>
             <DropdownMenuTrigger>
               <Avatar>
                 <AvatarFallback className="bg-gradient-to-r from-yellow-300 to-yellow-300" />
@@ -126,7 +126,7 @@ export function NavSidebar({
                 </DropdownMenuItem>
               </div>
             </DropdownMenuContent>
-          </DropdownMenu>
+          </DropdownMenu> */}
           <div className="">
             <ModeToggle />
           </div>

@@ -41,5 +41,3 @@ __data__
 **/stage-1-crawl/storage
 
 .env
-supabase/config.toml
-supabase/seed.sql
