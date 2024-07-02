@@ -1,5 +1,4 @@
 import "./globals.css"
-import { title } from "process"
 import { ReactNode } from "react"
 import localFont from "next/font/local"
 

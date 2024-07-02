@@ -442,24 +442,29 @@ function AdminNav({ pathname }: { pathname: string }) {
 
 export function LogoAnimationLink() {
   return (
-    <Button
-      className="relative w-full size-9 rounded-full bg-black"
-      variant="outline"
-      asChild
-    >
-      <Link href="/" className="flex justify-center">
-        <div className="absolute bg-yellow-300/90 h-[80%] w-[2px] rounded-bl-full rounded-br-full l-0 r-0 animate-[spin-scale_40s_linear_infinite]" />
-        <div className="absolute bg-pink-300/90 h-[80%] w-[2px] rounded-bl-full rounded-br-full l-0 r-0 animate-[spin-scale_30s_linear_infinite]" />
-        <div className="absolute bg-cyan-300/70 h-[80%] w-[2px] rounded-bl-full rounded-br-full l-0 r-0 animate-[spin-scale_20s_linear_infinite]" />
-        <div className="absolute bg-yellow-300/90 h-[80%] w-[2px] rounded-bl-full rounded-br-full l-0 r-0 animate-[spin-scale_15s_linear_infinite]" />
-        <div className="absolute bg-pink-300/70 h-[80%] w-[2px] rounded-bl-full rounded-br-full l-0 r-0 animate-[spin-scale_10s_linear_infinite]" />
-
-        <div className="absolute bg-pink-300/90 h-[40%] w-[2px] rounded-bl-full rounded-br-full l-0 r-0 animate-[spin-scale_80s_linear_infinite]" />
-        <div className="absolute bg-cyan-300/70 h-[40%] w-[2px] rounded-bl-full rounded-br-full l-0 r-0 animate-[spin-scale_60s_linear_infinite]" />
-        <div className="absolute bg-yellow-300/90 h-[40%] w-[2px] rounded-bl-full rounded-br-full l-0 r-0 animate-[spin-scale_40s_linear_infinite]" />
-        <div className="absolute bg-pink-300/90 h-[40%] w-[2px] rounded-bl-full rounded-br-full l-0 r-0 animate-[spin-scale_30s_linear_infinite]" />
-        <div className="absolute bg-cyan-300/90 h-[40%] w-[2px] rounded-bl-full rounded-br-full l-0 r-0 animate-[spin-scale_20s_linear_infinite]" />
-      </Link>
-    </Button>
+    <Link href="/">
+      <img src="/icon-192.png" alt="Logo" width="36" height="36" className="size-9" />
+    </Link>
   )
+  // return (
+  //   <Button
+  //     className="relative w-full size-9 rounded-full bg-black"
+  //     variant="outline"
+  //     asChild
+  //   >
+  //     <Link href="/" className="flex justify-center">
+  //       <div className="absolute bg-yellow-300/90 h-[80%] w-[2px] rounded-bl-full rounded-br-full l-0 r-0 animate-[spin-scale_40s_linear_infinite]" />
+  //       <div className="absolute bg-pink-300/90 h-[80%] w-[2px] rounded-bl-full rounded-br-full l-0 r-0 animate-[spin-scale_30s_linear_infinite]" />
+  //       <div className="absolute bg-cyan-300/70 h-[80%] w-[2px] rounded-bl-full rounded-br-full l-0 r-0 animate-[spin-scale_20s_linear_infinite]" />
+  //       <div className="absolute bg-yellow-300/90 h-[80%] w-[2px] rounded-bl-full rounded-br-full l-0 r-0 animate-[spin-scale_15s_linear_infinite]" />
+  //       <div className="absolute bg-pink-300/70 h-[80%] w-[2px] rounded-bl-full rounded-br-full l-0 r-0 animate-[spin-scale_10s_linear_infinite]" />
+
+  //       <div className="absolute bg-pink-300/90 h-[40%] w-[2px] rounded-bl-full rounded-br-full l-0 r-0 animate-[spin-scale_80s_linear_infinite]" />
+  //       <div className="absolute bg-cyan-300/70 h-[40%] w-[2px] rounded-bl-full rounded-br-full l-0 r-0 animate-[spin-scale_60s_linear_infinite]" />
+  //       <div className="absolute bg-yellow-300/90 h-[40%] w-[2px] rounded-bl-full rounded-br-full l-0 r-0 animate-[spin-scale_40s_linear_infinite]" />
+  //       <div className="absolute bg-pink-300/90 h-[40%] w-[2px] rounded-bl-full rounded-br-full l-0 r-0 animate-[spin-scale_30s_linear_infinite]" />
+  //       <div className="absolute bg-cyan-300/90 h-[40%] w-[2px] rounded-bl-full rounded-br-full l-0 r-0 animate-[spin-scale_20s_linear_infinite]" />
+  //     </Link>
+  //   </Button>
+  // )
 }
