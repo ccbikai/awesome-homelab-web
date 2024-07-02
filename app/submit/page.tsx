@@ -4,7 +4,7 @@ import { createClient } from "@/db/supabase/server"
 
 import { FadeIn } from "@/components/cult/fade-in"
 
-import { NavSidebar } from "../../components/nav"
+import { NavSidebar } from "../../components/nav-homelab"
 import { getCachedFilters } from "../actions/cached_actions"
 import SubmitTool from "./form"
 

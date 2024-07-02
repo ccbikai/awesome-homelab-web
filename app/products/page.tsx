@@ -7,7 +7,7 @@ import { FadeIn } from "@/components/cult/fade-in"
 import { GradientHeading } from "@/components/cult/gradient-heading"
 import { ResourceCardGrid } from "@/components/directory-card-grid"
 
-import { NavSidebar } from "../../components/nav"
+import { NavSidebar } from "../../components/nav-homelab"
 import { getCachedFilters } from "../actions/cached_actions"
 import { getProducts } from "../actions/product"
 

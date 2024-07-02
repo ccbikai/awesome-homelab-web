@@ -10,7 +10,7 @@ import {
   FeaturedGrid,
   ResourceCardGrid,
 } from "../components/directory-card-grid"
-import { NavSidebar } from "../components/nav"
+import { NavSidebar } from "../components/nav-homelab"
 import { getCachedFilters } from "./actions/cached_actions"
 import { getProducts } from "./actions/product"
 

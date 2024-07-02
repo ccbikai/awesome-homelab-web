@@ -78,7 +78,7 @@ export function NavSidebar({
           "fixed inset-y-0 left-0 z-10 hidden sm:flex flex-col bg-[#FAFAFA] dark:bg-background"
         )}
       >
-        <nav className="flex flex-col items-center gap-4 px-2 py-5">
+        <nav className="flex flex-col items-center gap-4 px-2 py-5 flex-1">
           {pathname.includes("admin") ? (
             <>
               <LogoAnimationLink />
@@ -98,10 +98,10 @@ export function NavSidebar({
           className={
             pathname.includes("admin")
               ? "flex flex-col gap-4 items-center py-5 mt-auto px-2 mx-2"
-              : "pl-3 flex flex-col justify-center gap-4 items-start pb-8"
+              : "pl-3 flex flex-col justify-center gap-4 items-start pb-4"
           }
         >
-          <DropdownMenu>
+          {/* <DropdownMenu>
             <DropdownMenuTrigger>
               <Avatar>
                 <AvatarFallback className="bg-gradient-to-r from-yellow-300 to-yellow-300" />
@@ -126,7 +126,7 @@ export function NavSidebar({
                 </DropdownMenuItem>
               </div>
             </DropdownMenuContent>
-          </DropdownMenu>
+          </DropdownMenu> */}
           <div className="">
             <ModeToggle />
           </div>
@@ -169,7 +169,7 @@ export function NavSidebar({
                       handleLinkClick={handleLinkClick}
                       searchParams={searchParams}
                     >
-                      <div className="my-4 space-y-3">
+                      {/* <div className="my-4 space-y-3">
                         <Link
                           href="/"
                           className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground"
@@ -198,14 +198,14 @@ export function NavSidebar({
                           <LogIn className="h-5 w-5" />
                           Login
                         </Link>
-                      </div>
+                      </div> */}
                     </ProductNav>
                   </>
                 )}
               </nav>
               <div className="flex flex-col items-start pl-4">
                 <nav className="mb-6   flex gap-4 ">
-                  <DropdownMenu>
+                  {/* <DropdownMenu>
                     <DropdownMenuTrigger>
                       <Avatar>
                         <AvatarFallback className="bg-gradient-to-r from-yellow-300 to-yellow-300" />
@@ -228,7 +228,7 @@ export function NavSidebar({
                         </DropdownMenuItem>
                       </div>
                     </DropdownMenuContent>
-                  </DropdownMenu>
+                  </DropdownMenu> */}
                   <ModeToggle />
                 </nav>
               </div>
@@ -261,7 +261,7 @@ function ProductNav({
     <div className="">
       <LogoAnimationLink />
       {children}
-      <ScrollArea className="h-[calc(100vh-320px)] md:h-[calc(100vh-200px)] flex flex-col gap-4 pl-2">
+      <ScrollArea className="h-[calc(100vh-160px)] md:h-[calc(100vh-200px)] flex flex-col gap-4 pl-2">
         {categories && categories?.length > 0 && (
           <div className="flex items-center gap-2 mt-6 text-muted-foreground">
             <BoxIcon className="size-5 stroke-yellow-400" />
@@ -442,24 +442,35 @@ function AdminNav({ pathname }: { pathname: string }) {
 
 export function LogoAnimationLink() {
   return (
-    <Button
-      className="relative w-full size-9 rounded-full bg-black"
-      variant="outline"
-      asChild
-    >
-      <Link href="/" className="flex justify-center">
-        <div className="absolute bg-yellow-300/90 h-[80%] w-[2px] rounded-bl-full rounded-br-full l-0 r-0 animate-[spin-scale_40s_linear_infinite]" />
-        <div className="absolute bg-pink-300/90 h-[80%] w-[2px] rounded-bl-full rounded-br-full l-0 r-0 animate-[spin-scale_30s_linear_infinite]" />
-        <div className="absolute bg-cyan-300/70 h-[80%] w-[2px] rounded-bl-full rounded-br-full l-0 r-0 animate-[spin-scale_20s_linear_infinite]" />
-        <div className="absolute bg-yellow-300/90 h-[80%] w-[2px] rounded-bl-full rounded-br-full l-0 r-0 animate-[spin-scale_15s_linear_infinite]" />
-        <div className="absolute bg-pink-300/70 h-[80%] w-[2px] rounded-bl-full rounded-br-full l-0 r-0 animate-[spin-scale_10s_linear_infinite]" />
-
-        <div className="absolute bg-pink-300/90 h-[40%] w-[2px] rounded-bl-full rounded-br-full l-0 r-0 animate-[spin-scale_80s_linear_infinite]" />
-        <div className="absolute bg-cyan-300/70 h-[40%] w-[2px] rounded-bl-full rounded-br-full l-0 r-0 animate-[spin-scale_60s_linear_infinite]" />
-        <div className="absolute bg-yellow-300/90 h-[40%] w-[2px] rounded-bl-full rounded-br-full l-0 r-0 animate-[spin-scale_40s_linear_infinite]" />
-        <div className="absolute bg-pink-300/90 h-[40%] w-[2px] rounded-bl-full rounded-br-full l-0 r-0 animate-[spin-scale_30s_linear_infinite]" />
-        <div className="absolute bg-cyan-300/90 h-[40%] w-[2px] rounded-bl-full rounded-br-full l-0 r-0 animate-[spin-scale_20s_linear_infinite]" />
-      </Link>
-    </Button>
+    <Link href="/">
+      <img
+        src="/icon-192.png"
+        alt="Logo"
+        width="36"
+        height="36"
+        className="size-9"
+      />
+    </Link>
   )
+  // return (
+  //   <Button
+  //     className="relative w-full size-9 rounded-full bg-black"
+  //     variant="outline"
+  //     asChild
+  //   >
+  //     <Link href="/" className="flex justify-center">
+  //       <div className="absolute bg-yellow-300/90 h-[80%] w-[2px] rounded-bl-full rounded-br-full l-0 r-0 animate-[spin-scale_40s_linear_infinite]" />
+  //       <div className="absolute bg-pink-300/90 h-[80%] w-[2px] rounded-bl-full rounded-br-full l-0 r-0 animate-[spin-scale_30s_linear_infinite]" />
+  //       <div className="absolute bg-cyan-300/70 h-[80%] w-[2px] rounded-bl-full rounded-br-full l-0 r-0 animate-[spin-scale_20s_linear_infinite]" />
+  //       <div className="absolute bg-yellow-300/90 h-[80%] w-[2px] rounded-bl-full rounded-br-full l-0 r-0 animate-[spin-scale_15s_linear_infinite]" />
+  //       <div className="absolute bg-pink-300/70 h-[80%] w-[2px] rounded-bl-full rounded-br-full l-0 r-0 animate-[spin-scale_10s_linear_infinite]" />
+
+  //       <div className="absolute bg-pink-300/90 h-[40%] w-[2px] rounded-bl-full rounded-br-full l-0 r-0 animate-[spin-scale_80s_linear_infinite]" />
+  //       <div className="absolute bg-cyan-300/70 h-[40%] w-[2px] rounded-bl-full rounded-br-full l-0 r-0 animate-[spin-scale_60s_linear_infinite]" />
+  //       <div className="absolute bg-yellow-300/90 h-[40%] w-[2px] rounded-bl-full rounded-br-full l-0 r-0 animate-[spin-scale_40s_linear_infinite]" />
+  //       <div className="absolute bg-pink-300/90 h-[40%] w-[2px] rounded-bl-full rounded-br-full l-0 r-0 animate-[spin-scale_30s_linear_infinite]" />
+  //       <div className="absolute bg-cyan-300/90 h-[40%] w-[2px] rounded-bl-full rounded-br-full l-0 r-0 animate-[spin-scale_20s_linear_infinite]" />
+  //     </Link>
+  //   </Button>
+  // )
 }
