@@ -261,7 +261,7 @@ function ProductNav({
     <div className="">
       <LogoAnimationLink />
       {children}
-      <ScrollArea className="h-[calc(100vh-160px)] md:h-[calc(100vh-200px)] flex flex-col gap-4 pl-2">
+      <ScrollArea className="h-[calc(100vh-160px)] md:h-[calc(100vh-140px)] flex flex-col gap-4 pl-2">
         {categories && categories?.length > 0 && (
           <div className="flex items-center gap-2 mt-6 text-muted-foreground">
             <BoxIcon className="size-5 stroke-yellow-400" />
