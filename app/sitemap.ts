@@ -2,6 +2,8 @@ import { MetadataRoute } from "next"
 
 import { getProducts } from "./actions/product"
 
+export const runtime = "edge"
+
 const defaultUrl = process.env.BASE_URL
   ? process.env.BASE_URL
   : "http://localhost:3000"
