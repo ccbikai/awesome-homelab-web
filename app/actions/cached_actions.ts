@@ -30,14 +30,17 @@ async function getFilters(): Promise<FilterData> {
   const { data: categoriesData, error: categoriesError } = await client
     .from("categories")
     .select("name")
+    .order("name")
 
   const { data: labelsData, error: labelsError } = await client
     .from("labels")
     .select("name")
+    .order("name")
 
   const { data: tagsData, error: tagsError } = await client
     .from("tags")
     .select("name")
+    .order("name")
 
   if (categoriesError || labelsError || tagsError) {
     console.error(
