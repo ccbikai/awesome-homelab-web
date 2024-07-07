@@ -31,7 +31,7 @@ export function Hero({ children }: { children?: React.ReactNode }) {
           <SupabaseIcon className="hidden md:block size-4" />
         </div> */}
         <p className="mt-2 text-center md:text-left text-muted-foreground text-sm md:text-base px-2">
-          Curating Top Apps for Homelab Enthusiasts
+          Curating Top Open Source Apps for Homelab Enthusiasts
         </p>
       </div>
       <div className="flex mt-4 mb-4 space-x-4">

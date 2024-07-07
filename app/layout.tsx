@@ -18,7 +18,8 @@ const defaultUrl = process.env.BASE_URL
 
 const metabase = {
   name: "Awesome Homelab",
-  title: "Awesome Homelab - Curating Top Apps for Homelab Enthusiasts",
+  title:
+    "Awesome Homelab - Curating Top Open Source Apps for Homelab Enthusiasts",
   description:
     "Awesome Homelab offers the most comprehensive solutions for building and optimizing your home server. Discover top applications, tools, and guides to enhance your homelab environment. Whether you're a beginner or an expert, find everything you need right here.",
   keywords:
