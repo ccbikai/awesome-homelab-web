@@ -90,7 +90,7 @@ export const ProductDetails = ({ product }: { product: Product }) => (
               alt={`${product.full_name} image`}
             />
           </div>
-          <CardDescription className="text-2xl tracking-tight leading-tight text-neutral-800 text-balance dark:text-neutral-400">
+          <CardDescription className="text-2xl tracking-tight leading-tight text-neutral-800 text-balance whitespace-pre-line dark:text-neutral-400">
             {product.description}
           </CardDescription>
 

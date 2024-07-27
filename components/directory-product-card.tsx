@@ -121,7 +121,7 @@ export const ResourceCard: React.FC<{
                 optimisticResource.view_count > 100 ? " text-neutral-700" : ""
               )}
             >
-              {trim ? `${data.description.slice(0, 82)}...` : data.description}
+              {trim ? `${data.punchline.slice(0, 82)}...` : data.punchline}
             </MinimalCardDescription>
 
             <MinimalCardContent />

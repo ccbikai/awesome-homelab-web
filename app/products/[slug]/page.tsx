@@ -26,8 +26,8 @@ export async function generateMetadata({
 
   const metabase = {
     name: product.full_name,
-    title: `${product.full_name} - Awesome Homelab`,
-    description: product.description,
+    title: `${product.full_name} - ${product.punchline} | Awesome Homelab`,
+    description: product.punchline,
     keywords: product.labels?.join(","),
   }
 
