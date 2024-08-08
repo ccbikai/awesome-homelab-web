@@ -91,6 +91,23 @@ export async function getProductById(id?: string) {
   return data
 }
 
+export async function getProductByUserProject(user: string, project: string) {
+  const supabase = createClient()
+
+  const { data, error } = await supabase
+    .from("products")
+    .select("*")
+    .ilike("product_website", `%${user}/${project}%`)
+    .limit(1)
+
+  if (error) {
+    console.error("Error fetching resources:", error)
+    return []
+  }
+
+  return data
+}
+
 export async function incrementClickCount(id: string) {
   const supabase = createClient()
 

@@ -73,6 +73,11 @@ export const ResourceCard: React.FC<{
     incrementClickCount(data.id)
   }
 
+  const getProjectPath = (data: Product) => {
+    const project = new URL(data.product_website)
+    return project.pathname
+  }
+
   return (
     <motion.div
       key={`resource-card-${data.id}-${order}`}
@@ -82,8 +87,8 @@ export const ResourceCard: React.FC<{
       className="group relative  break-inside-avoid w-full"
     >
       <Link
-        href={`/products/${data.id}`}
-        key={`/products/${data.id}`}
+        href={`/products${getProjectPath(data)}`}
+        key={`/products${getProjectPath(data)}`}
         className=""
         onClick={handleClick}
       >

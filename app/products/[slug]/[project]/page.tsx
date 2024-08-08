@@ -1,7 +1,7 @@
 import { notFound, redirect } from "next/navigation"
 
 import { FadeIn } from "@/components/cult/fade-in"
-import { getProductById } from "@/app/actions/product"
+import { getProductByUserProject } from "@/app/actions/product"
 
 import { ProductDetails } from "./details"
 
@@ -19,9 +19,9 @@ const getProjectPath = (data: any) => {
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string }
+  params: { slug: string; project: string }
 }) {
-  let data = await getProductById(params.slug)
+  let data = await getProductByUserProject(params.slug, params.project)
 
   if (!data) {
     return {}
@@ -58,8 +58,12 @@ export async function generateMetadata({
   }
 }
 
-const ProductIdPage = async ({ params }: { params: { slug: string } }) => {
-  let data = await getProductById(params.slug)
+const ProductIdPage = async ({
+  params,
+}: {
+  params: { slug: string; project: string }
+}) => {
+  let data = await getProductByUserProject(params.slug, params.project)
 
   if (!data) {
     notFound()

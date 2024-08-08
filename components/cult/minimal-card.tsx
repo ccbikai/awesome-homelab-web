@@ -43,6 +43,7 @@ const MinimalCardImage = React.forwardRef<
       width={200}
       height={200}
       className="rounded-[16px] object-cover absolute h-full w-full inset-0 "
+      loading="lazy"
     />
     <div className="absolute inset-0 rounded-[16px]">
       <div
