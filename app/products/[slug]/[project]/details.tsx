@@ -42,6 +42,11 @@ interface Product {
   categories: string
 }
 
+const getProjectPath = (data: any) => {
+  const project = new URL(data.product_website)
+  return project.pathname
+}
+
 export const ProductDetails = ({ product }: { product: Product }) => (
   <div className={cn("py-4 relative flex flex-col h-full")}>
     <div className="w-full gap-8 py-6 relative items-center">
@@ -50,7 +55,7 @@ export const ProductDetails = ({ product }: { product: Product }) => (
           <Breadcrumb>
             <BreadcrumbItem>
               <BreadcrumbLink href="/">Products</BreadcrumbLink>/
-              <BreadcrumbLink href={`/products/${product.id}`}>
+              <BreadcrumbLink href={`/products${getProjectPath(product)}`}>
                 {product.codename.substring(0, 20)}
               </BreadcrumbLink>
             </BreadcrumbItem>
@@ -70,7 +75,7 @@ export const ProductDetails = ({ product }: { product: Product }) => (
           )}
 
           <Link
-            href={`/products`}
+            href={`/`}
             className="py-4 md:flex items-center text-2xl font-semibold text-yellow-500  z-10 hidden"
           >
             <ArrowLeft className="mr-2" /> Back to all products
@@ -131,7 +136,7 @@ export const ProductDetails = ({ product }: { product: Product }) => (
       href={`/`}
       className="py-4 md:hidden items-center text-2xl font-semibold text-yellow-500  z-10 w-full flex"
     >
-      <ArrowLeft className="mr-2" /> Back to all productss
+      <ArrowLeft className="mr-2" /> Back to all products
     </Link>
     <div className="absolute top-36 md:top-0 left-[-10%] right-0 h-[400px] w-[300px]  md:h-[500px] md:w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(255,235,59,.15),rgba(255,255,255,0))]"></div>
   </div>
