@@ -324,7 +324,7 @@ function ProductNav({
           ))}
         </ul>
 
-        {labels && labels?.length > 0 && (
+        {/* {labels && labels?.length > 0 && (
           <div className="flex items-center gap-2 mt-6 text-muted-foreground">
             <Hash className="size-5 stroke-cyan-400" />
             <p className="text-sm md:hidden">Labels</p>
@@ -353,7 +353,7 @@ function ProductNav({
               </Link>
             </li>
           ))}
-        </ul>
+        </ul> */}
       </ScrollArea>
     </div>
   )
