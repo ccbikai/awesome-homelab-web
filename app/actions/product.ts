@@ -44,7 +44,9 @@ export const getProducts = cache(
     tag?: string
   ) => {
     const db = createClient()
-    let query = db.from("products").select("*")
+    let query = db.from("products").select("*").order("created_at", {
+      ascending: false,
+    })
 
     if (searchTerm) {
       query = query.or(
