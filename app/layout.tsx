@@ -62,6 +62,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           </TooltipProvider>
           <Toaster richColors />
         </ThemeProvider>
+        {process.env.FOOTER_INJECT && <div dangerouslySetInnerHTML={{ __html: process.env.FOOTER_INJECT }} />}
       </body>
     </html>
   )
