@@ -14,7 +14,7 @@ import { NavSidebar } from "../components/nav-homelab"
 import { getCachedFilters } from "./actions/cached_actions"
 import { getProducts } from "./actions/product"
 
-export const runtime = "edge"
+export const runtime = "nodejs"
 
 // Select the resources you want to feature.. AD SPACE?
 const FEATURED_IDS = [

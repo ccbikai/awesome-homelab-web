@@ -2,7 +2,7 @@ import { MetadataRoute } from "next"
 
 import { getProducts } from "./actions/product"
 
-export const runtime = "edge"
+export const runtime = "nodejs"
 
 const defaultUrl = process.env.BASE_URL
   ? process.env.BASE_URL

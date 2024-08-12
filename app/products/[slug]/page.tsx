@@ -5,7 +5,7 @@ import { getProductById } from "@/app/actions/product"
 
 import { ProductDetails } from "./details"
 
-export const runtime = "edge"
+export const runtime = "nodejs"
 
 const defaultUrl = process.env.BASE_URL
   ? process.env.BASE_URL
