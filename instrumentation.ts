@@ -1,5 +1,5 @@
 export async function register() {
-  if (process.env.NODE_ENV !== "production") {
+  if (!process.env.SENTRY_DSN) {
     return
   }
 
