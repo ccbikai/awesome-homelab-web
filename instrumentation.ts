@@ -1,5 +1,5 @@
 export async function register() {
-  if (!process.env.SENTRY_DSN) {
+  if (!process.env.NEXT_PUBLIC_SENTRY_DSN) {
     return
   }
 
