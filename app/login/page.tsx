@@ -2,7 +2,7 @@ import { LogoAnimationLink } from "@/components/nav-homelab"
 
 import { LoginForm } from "./form"
 
-export const runtime = "nodejs"
+export const runtime = "edge"
 
 export default async function LoginPage({
   searchParams,

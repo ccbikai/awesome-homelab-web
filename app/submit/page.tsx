@@ -8,7 +8,7 @@ import { NavSidebar } from "../../components/nav-homelab"
 import { getCachedFilters } from "../actions/cached_actions"
 import SubmitTool from "./form"
 
-export const runtime = "nodejs"
+export const runtime = "edge"
 
 export default async function ProtectedSubmitPage(): Promise<ReactElement> {
   let filters = await getCachedFilters()
